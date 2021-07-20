@@ -39,6 +39,7 @@
 .sidebarOption--active,
 .sidebarOption--active > p,
 .sidebarOption--active > h3 {
+    transition: 200ms all ease;
     background-color: #fcecec;
     color: #c04b37;
     font-weight: 800 !important;
