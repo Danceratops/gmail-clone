@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core';
+import { Button, IconButton } from '@material-ui/core';
 import React from 'react';
 
 import SidebarOption from './SidebarOption';
@@ -11,6 +11,9 @@ import LabelImportantIcon from '@material-ui/icons/LabelImportant';
 import SendIcon from '@material-ui/icons/Send';
 import NoteIcon from '@material-ui/icons/Note';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import PersonIcon from '@material-ui/icons/Person';
+import VideoCallIcon from '@material-ui/icons/VideoCall';
+import PhoneIcon from '@material-ui/icons/Phone';
 
 import './Sidebar.css';
 
@@ -28,6 +31,20 @@ function Sidebar(){
             <SidebarOption Icon={SendIcon} title="Sent" number={19} />
             <SidebarOption Icon={NoteIcon} title="Drafts" number={4} />
             <SidebarOption Icon={ExpandMoreIcon} title="More" number={""} />
+
+            <div className="sidebar_footer">
+                <div className="sidebar_footerIcons">
+                    <IconButton>
+                        <PersonIcon />
+                    </IconButton>
+                    <IconButton>
+                        <VideoCallIcon />
+                    </IconButton>
+                    <IconButton>
+                        <PhoneIcon />
+                    </IconButton>
+                </div>
+            </div>
         </div>
     )
 }
