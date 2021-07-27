@@ -16,11 +16,15 @@ import VideoCallIcon from '@material-ui/icons/VideoCall';
 import PhoneIcon from '@material-ui/icons/Phone';
 
 import './Sidebar.css';
+import { useDispatch } from 'react-redux';
+import { openSendMessage } from './features/mailSlice';
 
 function Sidebar(){
+    const dispatch = useDispatch();
+
     return (
         <div className="sidebar">
-            <Button startIcon={<AddIcon fontSize="large"/>} className="sidebar_compose">
+            <Button onClick={() => dispatch(openSendMessage())} startIcon={<AddIcon fontSize="large"/>} className="sidebar_compose">
                 Compose
             </Button>
 

@@ -1,6 +1,7 @@
 .mail {
     flex: 1;
     background-color: whitesmoke;
+    height: fit-content;
 }
 
 .mail_tools {
@@ -11,4 +12,48 @@
 
 .mail_toolsLeft {
     display: flex;
+}
+
+.mail_body {
+    display: flex;
+    flex-direction: column;
+    margin: 36px;
+    background-color: white;
+    padding: 24px;
+    height: 100vh;
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.24);
+}
+
+.mail_bodyHeader {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    position: relative;
+}
+
+.mail_important {
+    color: #e8ab02;
+}
+
+.mail_bodyHeader > h2 {
+    font-weight: 400;
+    margin-right: 24px;
+}
+
+.mail_bodyHeader > p {
+    margin-left: 24px;
+}
+
+.mail_time {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    font-size: 12px;
+    color: gray;
+}
+
+.mail_message > p {
+    padding: 8px;
+    margin-right: 24px;
+    overflow-wrap: break-word;
 }
