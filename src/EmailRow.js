@@ -6,12 +6,25 @@ import StarOutlineIcon from '@material-ui/icons/StarOutline';
 import LabelIcon from '@material-ui/icons/Label';
 
 import './EmailRow.css';
+import { useDispatch } from 'react-redux';
+import { selectMail } from './features/mailSlice';
 
-function EmailRow({ id, title, subject, time }){
+function EmailRow({ id, title, subject, time, message }){
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    const openMail = () => {
+        dispatch(
+            selectMail({
+                id, title, subject, time, message
+            })
+        );
+
+        history.push("mail");
+    };
 
     return (
-        <div onClick={() => history.push("mail")} className="emailRow">
+        <div onClick={openMail} className="emailRow">
             <div className="emailRow_options">
                 <Checkbox />
                 <IconButton>
